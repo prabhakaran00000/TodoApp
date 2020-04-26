@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TodoApp</string>
+    <string name="add_ussr">Add the user</string>
+    <string name="add">Add</string>
+    <string name="user_name_empty">Give valid user name</string>
+    <string name="email_empty">Enter the valid email Id</string>
+    <string name="update">Update</string>
+    <string name="dialog_title">Update or Delete the data ?</string>
+    <string name="removed_successfully">Removed successfully</string>
+    <string name="updated_successfully">Updated successfully</string>
+    <string name="added_successfully">Added Sucessfully</string>
+    <string name="delete">Delete</string>
+    <string name="user_name">User Name</string>
+    <string name="email_id">Email Id</string>
+</resources>

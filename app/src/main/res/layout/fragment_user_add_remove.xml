@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.phablecare.demoapp.ui.HomeViewModel" />
+        <variable
+            name="userDetail"
+            type="com.phablecare.demoapp.model.UserDetail" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".ui.login.LoginActivity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="24dp"
+            app:error ="@{homeViewModel.errorUserName}"
+            app:hintTextColor="?attr/colorPrimary"
+            android:hint="@string/user_name"
+            android:textColorHint="?attr/colorOnSurface"
+            android:inputType="textPersonName"
+            android:text="@={userDetail.userName}"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:selectAllOnFocus="true"
+            app:error ="@{homeViewModel.errorEmailId}"
+            app:hintTextColor="?attr/colorPrimary"
+            android:hint="@string/email_id"
+            android:textColorHint="?attr/colorOnSurface"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:text="@={userDetail.emailId}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_username">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="64dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:backgroundTint="?attr/colorPrimary"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_password"
+            app:layout_constraintVertical_bias="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
